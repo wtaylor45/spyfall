@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
+
+.game {
+  text-align: center;
+  /* background: rgb(0, 132, 255); */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.subtitle {
+  color: #aaa;
+}
+
+.code {
+  color: rgb(0, 255, 0);
+  font-family: 'Courier Prime', monospace;
+  font-size: 34px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.list {
+  list-style: none;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+
+.list li {
+  background: rgba(0, 0, 0, .2);
+}
+
+.list li {
+  padding: 5px;
+  margin: 1px;
+}
+
+.long {
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.leave {
+  background: red;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.start {
+  background: rgb(48, 206, 0);
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+.list-label {
+  color: white;
+  font-size: 24px;
+  margin: 10px 0 5px 0;
+}
+
+.show-role {
+  padding: 5px;
+  background: rgb(48, 206, 0);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  width: 75%;
+  text-transform: uppercase;
+}
+
+.show-role:disabled {
+  background: gray;
+  color: darkgray;
+}
+
+.game-info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  align-items: center;
+}
+
+.timer {
+  color: white;
+  font-weight: 700;
+}
+
+.end-game {
+  color: white;
+  background: red;
+  width: 90%;
+  font-size: 14px;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+}
+
+.role-info {
+  font-family: 'Courier Prime', monospace;
+  padding: 5px;
+  color: white;
+  margin-top: 10px;
+}
