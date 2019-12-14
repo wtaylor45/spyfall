@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Room = require('../server/room');
+const path = require('path');
 
 module.exports = function (io) {
 
@@ -18,6 +19,12 @@ module.exports = function (io) {
     if (isNew) players.push(player);
     return player;
   }
+
+  router.use(express.static(path.join(__dirname, '../client', 'build')));
+
+  router.get('/', function (req, res) {
+    res.sendFile('index.html');
+  });
 
   router.post('/create', function (req, res) {
     const code = Math.random().toString(36).replace(/[^a-z0-9]+/g, '').substr(1, 4);

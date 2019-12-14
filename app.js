@@ -21,15 +21,12 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/game', gameRouter);
 
-// catch 404 and forward to error handler
-app.use(express.static(path.join(__dirname, 'client/build')));
-
 io.on('connection', function (socket) {
+  console.log('hi', socket.id)
   socket.emit('connected', uuidv1());
 
   socket.on('joined', (body) => {
@@ -54,7 +51,7 @@ app.use(function(err, req, res, next) {
 });
 
 http.listen(process.env.PORT || 5000, function(){
-  console.log('listening on *:3001');
+  console.log('listening on 5000');
 });
 
 module.exports = app;
