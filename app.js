@@ -27,9 +27,7 @@ app.use('/', indexRouter);
 app.use('/game', gameRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 io.on('connection', function (socket) {
   socket.emit('connected', uuidv1());
