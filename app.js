@@ -55,7 +55,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
 });
 
-http.listen(3001, function(){
+http.listen(process.env.PORT || 5000, function(){
   console.log('listening on *:3001');
 });
 
